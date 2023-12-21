@@ -11,7 +11,14 @@
 
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <label for="sort-tasks">Sort Tasks By:</label>
+      <select name="sort" id="sort-tasks">
+          <option value="priority">Priority</option>
+          <option value="user">User</option>
+          <option value="date">Date</option>
+        </select>
+      <input type="text" id="new_task_description" name="new-task-description" placeholder="description">
+      <input type="text" name="edit_task" id="edit_task">
       <input type="submit" value="Create New Task">
     </form>
 
@@ -19,6 +26,13 @@
       <h2>My Todos</h2>
       <ul id="tasks">
       </ul>
+    </div>
+    <div id="to_do_container">
+      <select name="priority" id="priority_select">
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
     </div>
 
     <script src="./src/index.js"></script>
